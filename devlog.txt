@@ -1,0 +1,4 @@
+yukiC -- 2017-03-27 18:00
+Feedbacks:
+  - Allow user to pick different cities and years
+  - Allow user to click on a certain day and see the time stamps for sunrise and sunset
