@@ -1,5 +1,10 @@
-# DJJJ
-
+# Team: DJJJ
+Team Members: 
+  - Stephanie Yoon
+  - Edvic Julius Freyra
+  - James Wang
+  - Yuxuan Chen
+  
 ## Data set
 1. [Duration of Daylight/Darkness Table for One Year](http://aa.usno.navy.mil/data/docs/Dur_OneYear.php)
 2. Data set includes the durations of daylight/darkness throughout a given year (1700 - 2100) in a given city.
