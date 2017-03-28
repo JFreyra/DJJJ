@@ -13,4 +13,6 @@ Team Members:
 ## Approach
 1. Use bar graph to represent the durations of daylight/darkness
 2. Background brightness changes according to the duration of daylight/darkness
+3. Clicking on a bar of the year brings up a daylight graph/curve for that specific day
+4. Could be related to seasonal depression to explain what it is, when it usually hits, and its effects
 
