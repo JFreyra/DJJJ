@@ -2,3 +2,6 @@ yukiC -- 2017-03-27 18:00
 - Feedbacks:
   1. Allow user to pick different cities and years
   2. Allow user to click on a certain day and see the time stamps for sunrise and sunset
+juliusF -- 2017-03-28 00:05
+- created/pushed basic graphic
+- updated readme with basic info on how what the graphic represents
