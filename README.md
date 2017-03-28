@@ -16,3 +16,8 @@ Team Members:
 3. Clicking on a bar of the year brings up a daylight graph/curve for that specific day
 4. Could be related to seasonal depression to explain what it is, when it usually hits, and its effects
 
+## Visualisation
+1. Bars represent a day within a year
+2. Height represents the hours of sunlight in the day
+3. Nice graphics in the background make the graphic nice (possibly dynamic graphics)
+4. Clicking on a bar will create an instance of a graph of the day chosen, possibly will denote sunrise, sunset, implement data of what people do on a day to day basis from [the New York Times](http://www.nytimes.com/interactive/2009/07/31/business/20080801-metrics-graphic.html?_r=0)
