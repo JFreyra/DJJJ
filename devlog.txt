@@ -7,3 +7,5 @@ juliusF -- 2017-03-28 00:05
 - updated readme with basic info on how what the graphic represents
 juliusF -- 2017-03-28 21:06
 - pushed daylight data in csv form
+stephY -- 2017-03-29 09:26
+- updated basic html file
