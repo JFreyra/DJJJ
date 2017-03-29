@@ -48,3 +48,11 @@ svg.selectAll('rect')
     .attr("height", function (d, i) {
 	return yScale(d);
     });
+
+var tip = d3.tip()
+  .attr('class', 'd3-tip')
+  .offset([-10, 0])
+  .html(function(d) {
+    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+  })
+
