@@ -5,3 +5,5 @@ yukiC -- 2017-03-27 18:00
 juliusF -- 2017-03-28 00:05
 - created/pushed basic graphic
 - updated readme with basic info on how what the graphic represents
+juliusF -- 2017-03-28 21:06
+- pushed daylight data in csv form
