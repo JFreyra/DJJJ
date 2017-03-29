@@ -1,4 +1,37 @@
-var data = d3.range(365).map(function () {
+var createGradient = function(svg, id, stops){
+    var svgNS = svg.namespaceURI;
+    var grad  = document.createElementNS(svgNS,'linearGradient');
+    grad.setAttribute("id",id);
+    for (var i = 0; i< stops.length; i++) {
+        var attrs = stops[i];
+        var stop = document.createElementNS(svgNS,'stop');
+        for (var attr in attrs) {
+            if (attrs.hasOwnProperty(attr)) stop.setAttribute(attr,attrs[attr]);
+        }
+        grad.appendChild(stop);
+    }
+
+    var defs = svg.querySelector('defs') ||
+        svg.insertBefore( document.createElementNS(svgNS,'defs'), svg.firstChild);
+    return defs.appendChild(grad);
+}
+
+var night = "#001848";
+var orange = "orange";
+var day = "#87CEEB";
+
+// Dynamically set this
+createGradient(document.getElementById("graphSVG"),"background",[
+    {offset:'0%', 'stop-color':night},
+    {offset:'30%', 'stop-color':orange},
+    {offset:'45%', 'stop-color':day},
+    {offset:'80%', 'stop-color':orange},
+    {offset:'100%','stop-color':night}
+]);
+
+d3.select('svg rect').attr('fill','url(#background)');
+
+var data = d3.range(365).map(function (i) {
     return Math.random();
 });
 
@@ -25,34 +58,34 @@ svg.selectAll('rect')
     .append('rect')
     .attr('class', 'bar')
     .attr("x", function (d, i) {
-	return xScale(d);
+        return xScale(d);
     })
     .attr("y", function (d, i) {
-	return height;
+        return height;
     })
     .attr("width", function (d, i) {
-	return xScale.rangeBand()
+        return xScale.rangeBand()
     })
     .attr("fill", function (d, i) {
-	return 'rgb(256, ' + Math.round(i / 2) + ', ' + i + ')'
+        return 'rgb(256, ' + Math.round(i / 2) + ', ' + i + ')'
     })
     .attr("height", 0)
     .transition()
     .duration(200)
     .delay(function (d, i) {
-	return i * 50;
+        return i * 50;
     })
     .attr("y", function (d, i) {
-	return height - yScale(d);
+        return height - yScale(d);
     })
     .attr("height", function (d, i) {
-	return yScale(d);
+        return yScale(d);
     });
 
 var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .offset([-10, 0])
-  .html(function(d) {
-    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
-  })
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+    })
 
