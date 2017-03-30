@@ -1,3 +1,10 @@
+Team: DJJJ
+Team Members:
+  Stephanie Yoon
+  Edvic Julius Freyra
+  James Wang
+  Yuxuan Chen
+
 yukiC -- 2017-03-27 18:00
 - Feedbacks:
   1. Allow user to pick different cities and years
