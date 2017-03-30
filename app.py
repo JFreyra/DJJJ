@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import csv,pprint
+import csv,pprint,json
 
 app = Flask(__name__)
 
@@ -38,6 +38,20 @@ def dataInit():
 @app.route("/")
 def home():
     return render_template("home.html")
+
+# @app.route("/upcase")
+# def upcase():
+#     data = request.args.get("text")
+#     print data
+    
+#     time.sleep(5)
+    
+#     result = {'original':data,
+#               'result':data.upper()
+#     }
+    
+#     return json.dumps(result)
+# will work on tonight - Julius
 
 if(__name__ == "__main__"):
     app.debug = True #allows app to update without killing server
