@@ -1,3 +1,17 @@
+// var getData = function() {
+//     $.ajax({
+// 	url: '/upcase',
+// 	type: 'GET',
+// 	data: input,
+// 	success: function( d ) {
+// 	    var h2 = document.getElementById("h2");
+// 	    d = JSON.parse(d);
+// 	    h2.innerHTML = d['result'];
+// 	}
+
+//      });
+// };
+// will work on tonight - Julius
 var createGradient = function(svg, id, stops){
     var svgNS = svg.namespaceURI;
     var grad  = document.createElementNS(svgNS,'linearGradient');
