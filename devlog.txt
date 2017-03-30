@@ -20,6 +20,8 @@ stephY -- 2017-03-29 09:26
 - moved daylight.csv into a new dir, data
 stephY -- 2017-3-29 13:55
 - started css file, tried to add tips, need to fix that later
+jamesW -- 2017-03-29 14:54
+- Added basic gradient background
 juliusF -- 2017-03-28 21:06
 - created basic app.py file
   - has basic route linking to home.html
