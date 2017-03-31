@@ -40,8 +40,9 @@ def home():
     month = (1./12)*100
     text = (1015./12)
     hour = (710./24)
+    hourColor = (255/24)
     print(month)
-    return render_template("home.html",gradPos=month,textPos=text,hour=hour)
+    return render_template("home.html",gradPos=month,textPos=text,hour=hour,hourC=hourColor)
 
 # AJAX
 @app.route("/dataret",methods=['GET'])
