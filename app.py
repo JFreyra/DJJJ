@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import csv,pprint,json
 
 app = Flask(__name__)
@@ -42,19 +42,14 @@ def home():
     print(month)
     return render_template("home.html",gradPos=month,textPos=text)
 
-# @app.route("/upcase")
-# def upcase():
-#     data = request.args.get("text")
-#     print data
+# AJAX
+@app.route("/dataret",methods=['GET'])
+def upcase():
+    result = {
+              'data': dataInit()
+    }
     
-#     time.sleep(5)
-    
-#     result = {'original':data,
-#               'result':data.upper()
-#     }
-    
-#     return json.dumps(result)
-# will work on tonight - Julius
+    return json.dumps(result)
 
 if(__name__ == "__main__"):
     app.debug = True #allows app to update without killing server

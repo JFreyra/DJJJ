@@ -28,7 +28,7 @@ stephY -- 2017-3-29 13:55
 jamesW -- 2017-03-29 14:54
 - Added basic gradient background
 
-juliusF -- 2017-03-28 21:06
+juliusF -- 2017-03-29 15:00
 - created basic app.py file
   - has basic route linking to home.html
   - has function that parses and formats daylight.csv data
@@ -37,3 +37,9 @@ juliusF -- 2017-03-28 21:06
 yukiC -- 2017-03-30 20:51
 - hardcode x- and y- axis labels
 - finished with x-axis label(months)
+
+juliusF -- 2017-03-31 13:50
+- wrote AJAX link between python and javascript
+  - initializes/formats data in python
+  - sends data to javascript
+- wrote code to initialize daylight data in var daylight on window load in javascript
