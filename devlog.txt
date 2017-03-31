@@ -9,21 +9,31 @@ yukiC -- 2017-03-27 18:00
 - Feedbacks:
   1. Allow user to pick different cities and years
   2. Allow user to click on a certain day and see the time stamps for sunrise and sunset
+
 juliusF -- 2017-03-28 00:05
 - created/pushed basic graphic
 - updated readme with basic info on how what the graphic represents
+
 juliusF -- 2017-03-28 21:06
 - pushed daylight data in csv form
+
 stephY -- 2017-03-29 09:26
 - updated basic html file
 - added home.js with sample code to start with -- animated bar graph. Need to replace random data with actual data, and to figure out how to animate the background with the animated bars.
 - moved daylight.csv into a new dir, data
+
 stephY -- 2017-3-29 13:55
 - started css file, tried to add tips, need to fix that later
+
 jamesW -- 2017-03-29 14:54
 - Added basic gradient background
+
 juliusF -- 2017-03-28 21:06
 - created basic app.py file
   - has basic route linking to home.html
   - has function that parses and formats daylight.csv data
 - created static, templates, static/js, static/css directories for better organization/flask compatibility
+
+yukiC -- 2017-03-30 20:51
+- hardcode x- and y- axis labels
+- finished with x-axis label(months)
