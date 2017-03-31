@@ -1,17 +1,26 @@
-// var getData = function() {
-//     $.ajax({
-// 	url: '/upcase',
-// 	type: 'GET',
-// 	data: input,
-// 	success: function( d ) {
-// 	    var h2 = document.getElementById("h2");
-// 	    d = JSON.parse(d);
-// 	    h2.innerHTML = d['result'];
-// 	}
 
-//      });
-// };
-// will work on tonight - Julius
+// AJAX
+// getData initializes data
+var daylight = [];
+var getData = function() {
+    $.ajax({
+	url: '/dataret',
+	type: 'GET',
+	success: function( d ) {
+	    d = JSON.parse(d);
+	    daylight = d['data'];
+	}
+
+     });
+};
+
+// Onload
+// inits data on window load
+window.onload = function(){
+    getData();
+    console.log("loaded");
+}
+
 var createGradient = function(svg, id, stops){
     var svgNS = svg.namespaceURI;
     var grad  = document.createElementNS(svgNS,'linearGradient');
