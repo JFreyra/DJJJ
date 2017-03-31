@@ -2,6 +2,7 @@
 // AJAX
 // getData initializes data
 var daylight = [];
+var daylightF = []; // formatted
 var getData = function() {
     $.ajax({
 	url: '/dataret',
@@ -14,12 +15,27 @@ var getData = function() {
      });
 };
 
+// Formats data for 
+var formatData = function(){
+    for (var i = 0; i < daylight.length; i++) {
+	for (var j = 0; j < daylight[i].length; j++){
+	    var val = daylight[i][j];
+	    if(val > 0){
+		daylightF.push(val);
+	    };
+	};
+    };
+
+};
+
 // Onload
 // inits data on window load
 window.onload = function(){
     getData();
+    formatData();
     console.log("loaded");
 }
+
 
 var createGradient = function(svg, id, stops){
     var svgNS = svg.namespaceURI;
