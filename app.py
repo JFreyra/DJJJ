@@ -37,7 +37,10 @@ def dataInit():
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    month = (1./12)*100
+    text = (1015./12)
+    print(month)
+    return render_template("home.html",gradPos=month,textPos=text)
 
 # @app.route("/upcase")
 # def upcase():

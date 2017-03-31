@@ -8,12 +8,49 @@
     </head>
     <body>
         <h1>Duration of Daylight over a Year in New York City</h1>
-	
-        <svg id="graphSVG">
-          <rect x="0" y="0" width="1000" height="700"/>
-	  <svg id="axis">
-	    <line x1="0" y1="700" x2="1000" y2="700" style="stroke:rgb(0,0,0);stroke-width:10"></line>
-	  </svg>
+	<svg id="axis" style="height:715;width:1015;">
+	  <defs>
+	    <linearGradient id="yAxis" x1="0%" y1="100%" x2="0%" y2="0%" gradientUnits="userSpaceOnUse">
+	      <stop offset="0%" style="stop-color:rgb(0,0,0);"/>
+	      <stop offset="100%" style="stop-color:rgb(250,250,250);"/>
+	    </linearGradient>
+
+	    <linearGradient id="xAxis" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+	      <stop offset="0%" style="stop-color:rgb(0,0,0);"/>
+	      <stop offset="{{gradPos}}%" style="stop-color:rgb(82, 82, 255);"/>
+	      <stop offset="{{2*gradPos}}%" style="stop-color:rgb(168, 82, 255);"/>
+	      <stop offset="{{3*gradPos}}%" style="stop-color:rgb(255, 82, 255);"/>
+	      <stop offset="{{4*gradPos}}%" style="stop-color:rgb(255, 82, 168);"/>
+	      <stop offset="{{5*gradPos}}%" style="stop-color:rgb(255, 82, 82);"/>
+	      <stop offset="{{6*gradPos}}%" style="stop-color:rgb(255, 125, 82);"/>
+	      <stop offset="{{7*gradPos}}%" style="stop-color:rgb(255, 212, 82);"/>
+	      <stop offset="{{8*gradPos}}%" style="stop-color:rgb(153, 204, 0);"/>
+	      <stop offset="{{9*gradPos}}%" style="stop-color:rgb(51, 204, 0);"/>
+	      <stop offset="{{10*gradPos}}%" style="stop-color:rgb(0, 204, 102);"/>
+	      <stop offset="{{11*gradPos}}%" style="stop-color:rgb(0, 204, 204);"/>
+	      <stop offset="{{12*gradPos}}%" style="stop-color:rgb(0, 102, 204);"/>
+	    </linearGradient>
+	    
+	  </defs>
+	  
+	  <svg id="graphSVG" x="15" y="0">
+            <rect x="0" y="0" width="1000" height="700"/>
+	  </svg>	
+	  <line x1="0" y1="708" x2="1015" y2="708" style="stroke:url(#xAxis);stroke-width:15"/>
+	  <text x="{{textPos-textPos/2}}" y="712.5" fill="white">Jan.</text>
+	  <text x="{{2*textPos-textPos/2}}" y="712.5" fill="white">Feb.</text>
+	  <text x="{{3*textPos-textPos/2}}" y="712.5" fill="white">Mar.</text>
+	  <text x="{{4*textPos-textPos/2}}" y="712.5" fill="white">Apr.</text>
+	  <text x="{{5*textPos-textPos/2}}" y="712.5" fill="white">May</text>
+	  <text x="{{6*textPos-textPos/2}}" y="712.5" fill="white">June</text>
+	  <text x="{{7*textPos-textPos/2}}" y="712.5" fill="white">July</text>
+	  <text x="{{8*textPos-textPos/2}}" y="712.5" fill="white">Aug.</text>
+	  <text x="{{9*textPos-textPos/2}}" y="712.5" fill="white">Sept.</text>
+	  <text x="{{10*textPos-textPos/2}}" y="712.5" fill="white">Oct.</text>
+	  <text x="{{11*textPos-textPos/2}}" y="712.5" fill="white">Nov.</text>
+	  <text x="{{12*textPos-textPos/2}}" y="712.5" fill="white">Dec.</text>
+	  
+	  <line x1="7" y1="0" x2="7" y2="715" style="stroke:url(#yAxis);stroke-width:15"/>
         </svg>
         <script src="../static/js/home.js"></script>
 	<script src="../static/js/jquery-3.1.1.min.js"></script>
