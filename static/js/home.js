@@ -2,7 +2,6 @@
 // AJAX
 // getData initializes data
 var daylight = [];
-var daylightF = []; // formatted
 var getData = function() {
     $.ajax({
 	url: '/dataret',
@@ -13,16 +12,20 @@ var getData = function() {
 	}
 
      });
+    
 };
 
 // Formats data for 
+// will be deprecated
+var daylightF = []; // formatted
 var formatData = function(){
     for (var i = 0; i < daylight.length; i++) {
+	console.log("entered");
 	for (var j = 0; j < daylight[i].length; j++){
 	    var val = daylight[i][j];
-	    if(val > 0){
-		daylightF.push(val);
-	    };
+	    //if(val > 0){
+	    daylightF.push(val);
+	    //};
 	};
     };
 
@@ -32,10 +35,8 @@ var formatData = function(){
 // inits data on window load
 window.onload = function(){
     getData();
-    formatData();
     console.log("loaded");
-}
-
+};
 
 var createGradient = function(svg, id, stops){
     var svgNS = svg.namespaceURI;
@@ -53,7 +54,7 @@ var createGradient = function(svg, id, stops){
     var defs = svg.querySelector('defs') ||
         svg.insertBefore( document.createElementNS(svgNS,'defs'), svg.firstChild);
     return defs.appendChild(grad);
-}
+};
 
 var night = "#001848";
 var orange = "orange";

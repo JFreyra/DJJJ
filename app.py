@@ -35,6 +35,16 @@ def dataInit():
 
     return dataformat
 
+# unusable as of now will fix - Julius
+def dataJSFormat():
+    dataMForm = dataInit()
+    daylightF = []
+    
+    for i in range (0,len(dataMForm)):
+        for j in range (0,len(dataMForm[i])):
+            val = dataMForm[i][j];
+            daylightF.append(val);
+            
 @app.route("/")
 def home():
     month = (1./12)*100
