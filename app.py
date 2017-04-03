@@ -43,7 +43,11 @@ def dataJSFormat():
     for i in range (0,len(dataMForm)):
         for j in range (0,len(dataMForm[i])):
             val = dataMForm[i][j];
-            daylightF.append(val);
+            if val > 0:
+                print val/1440.00000000000
+                daylightF.append(val/1440.000000000)
+
+    return daylightF
             
 @app.route("/")
 def home():
@@ -56,9 +60,9 @@ def home():
 
 # AJAX
 @app.route("/dataret",methods=['GET'])
-def upcase():
+def dataret():
     result = {
-              'data': dataInit()
+              'data': dataJSFormat()
     }
     
     return json.dumps(result)
