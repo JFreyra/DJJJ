@@ -4,3 +4,14 @@
     border: 1px solid black;
 }
 
+#axis{
+    height:715px;
+    width:1015px;
+}
+
+#yAxis{
+    x1:0%;
+    x2:0%;
+    y1:100%;
+    y2:0%;
+}
