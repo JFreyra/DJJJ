@@ -56,3 +56,6 @@ jamesW -- 2017-04-03 20:46
 
 yukiC -- 2017-04-03 22:50
 - Add JS code to add y-axis hour label instead of hardcoding
+
+stephY -- 2017-04-04 14:02
+- FINALLY figured out the green hill gradient :)
