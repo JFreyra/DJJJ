@@ -59,3 +59,6 @@ yukiC -- 2017-04-03 22:50
 
 stephY -- 2017-04-04 14:02
 - FINALLY figured out the green hill gradient :)
+
+jamesW -- 2017-04-04 15:41
+- Reworked the background gradient
