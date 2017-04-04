@@ -9,9 +9,15 @@
     width:1015px;
 }
 
-#yAxis{
-    x1:0%;
-    x2:0%;
-    y1:100%;
-    y2:0%;
+h1{
+    position:relative;
+    left:100px;
+    word-spacing:10px;
+}
+
+.bar{
+    pointer-events:all;
+}
+.bar:hover{
+    fill:white;
 }
