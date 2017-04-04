@@ -91,7 +91,7 @@ var createGraph = function(daylight){
             return xScale.rangeBand()
 	})
 	.attr("fill", function (d, i) {
-            return 'rgb(256, ' + Math.round(i / 2) + ', ' + i + ')'
+            return 'rgb(0, ' + (182-Math.abs(i-182)) + ', 0)'
 	})
 	.attr("height", 0)
 	.transition()
