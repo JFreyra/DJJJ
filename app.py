@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request
-import csv,pprint,json
+
+import csv
+import pprint
+import random
+import json
 
 app = Flask(__name__)
 
@@ -48,7 +52,7 @@ def dataJSFormat():
                 val = val/1440.0
                 if val in daylightF:
                     # Prevent duplicate values from being added
-                    val += 0.000000001
+                    val += random.random()/1000.0
                 daylightF.append(val)
 
     return daylightF
