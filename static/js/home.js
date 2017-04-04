@@ -12,7 +12,7 @@ var getData = function() {
 	    createGraph(daylight)
 	}
     });
-    
+
 };
 
 // Onload
@@ -24,7 +24,7 @@ window.onload = function(){
 
 var createGraph = function(daylight){
     console.log(daylight);
-    
+
     var createGradient = function(svg, id, stops){
 	var svgNS = svg.namespaceURI;
 	var grad  = document.createElementNS(svgNS,'linearGradient');
@@ -58,12 +58,6 @@ var createGraph = function(daylight){
 
     d3.select('svg rect').attr('fill','url(#background)');
 
-    // console.log(daylight);
-
-    // var daylight = d3.range(365).map(function (i) {
-    //     return Math.random();
-    // });
-
     var height = 700;
     var width = 1000;
     var barPadding = 0;
@@ -72,6 +66,7 @@ var createGraph = function(daylight){
     var yScale = d3.scale.linear()
 	.domain([0, d3.max(daylight)])
 	.range([0, height/1.75]);
+
 
     var xScale = d3.scale.ordinal()
 	.domain(daylight)

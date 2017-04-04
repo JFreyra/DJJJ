@@ -10,7 +10,7 @@ app = Flask(__name__)
 #  transposes the data into rows for months and columns for days
 # -if data does not have a value for a given day
 #  (day does not exist in that month), a 0 is put into formatted list
- 
+
 def dataInit():
     dataraw = []
 
@@ -19,7 +19,7 @@ def dataInit():
     for row in reader:
         print row
         dataraw.append(row)
-        
+
     dataformat = []
     for x in range(1,13):
         row = []
@@ -39,16 +39,20 @@ def dataInit():
 def dataJSFormat():
     dataMForm = dataInit()
     daylightF = []
-    
+
     for i in range (0,len(dataMForm)):
         for j in range (0,len(dataMForm[i])):
             val = dataMForm[i][j];
             if val > 0:
-                print val/1440.00000000000
-                daylightF.append(val/1440.000000000)
+                print val/1440.0
+                val = val/1440.0
+                if val in daylightF:
+                    # Prevent duplicate values from being added
+                    val += 0.000000001
+                daylightF.append(val)
 
     return daylightF
-            
+
 @app.route("/")
 def home():
     month = (1./12)*100
@@ -64,7 +68,7 @@ def dataret():
     result = {
               'data': dataJSFormat()
     }
-    
+
     return json.dumps(result)
 
 if(__name__ == "__main__"):
