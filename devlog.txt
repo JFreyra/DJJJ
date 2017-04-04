@@ -47,5 +47,8 @@ juliusF -- 2017-03-31 13:50
 stephY -- 2017-04-03 13:47
 - removed tip stuff
 
+jamesW -- 2017-04-03 20:46
+- Fixed issue with duplicate domain values causing the graph to backtrace
+
 yukiC -- 2017-04-03 22:50
 - Add JS code to add y-axis hour label instead of hardcoding
