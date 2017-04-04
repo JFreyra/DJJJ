@@ -107,3 +107,33 @@ var createGraph = function(daylight){
 	});
 
 };
+
+//Generate y-axis label
+var yAxisLabel = function(){
+    var hours = [];
+    for(i=1;i<25;i++){
+	var h = {};
+	if(i<10){
+	    h.cx = "2.5";
+	}else{
+	    h.cx = "-1";
+	};
+	h.cy = (715.0/24)*(25-i)-((715.0/24)/2);
+	h.t = i;
+	h.color = parseInt(255-i*(255/24));
+	hours.push(h);
+    };
+    console.log(hours);
+    var text = d3.select("#axis").selectAll("g")
+	.data(hours)
+	.enter()
+	.append("text");
+    console.log(text);
+    var addText = text
+	.attr("x",function(d){return d.cx;})
+	.attr("y",function(d){return d.cy;})
+	.attr("fill",function(d){return "rgb("+d.color+","+d.color+","+d.color+")"})
+	.text(function(d){return d.t;})
+	.attr("font-size","15px");
+};
+yAxisLabel();
