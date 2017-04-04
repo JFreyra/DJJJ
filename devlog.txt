@@ -47,5 +47,9 @@ juliusF -- 2017-03-31 13:50
 stephY -- 2017-04-03 13:47
 - removed tip stuff
 
+juliusF -- 2017-04-03 17:00
+- rewrote formatting of data in python to be parseable for bar graph
+- rewrote AJAX call after finding out altered variables do not exist on the global scope/only in ajax call
+
 yukiC -- 2017-04-03 22:50
 - Add JS code to add y-axis hour label instead of hardcoding
