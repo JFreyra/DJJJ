@@ -65,3 +65,7 @@ jamesW -- 2017-04-04 15:41
 
 jamesW -- 2017-04-04 17:25
 - Add random value to prevent duplicate domains
+
+yukiC -- 2017-04-04 22:22
+- add css to make individual bar change color when mouse hover over it
+- cleaning up repo
